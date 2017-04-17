@@ -2,20 +2,20 @@
 Make a csv file of [messier_id,ngc_id,v_mag,type,comments] V<11 objects that
 are bright and up.
 
-#FIXME
->>> python whats_up.py --help
-usage: run_the_machine.py [-h] [-ir] [-N NSTARS] [-p] [-inj INJ] [-frd] [-c]
-                          [-kicid KICID] [-nw NWORKERS] [-q]
+command line usage (n.b. `python whats_up.py -h` gives help).
 
+>>> python whats_up.py time_str [--make_catalog]
 
-Messier coordinates are retrieved from Simbad via astroquery.
-NGC catalog (2000) was downloaded from HEASARC.
+where `time_str` has format: '2017-04-17 22:00:00', and `--make-catalog` is an
+optional command line flag that data-wrangles web catalogs to a useful format.
+
+Note that running from e.g., IPython allows on-the-fly lookups.
 '''
 
 # Generic imports
 import numpy as np
 import pandas as pd, matplotlib.pyplot as plt
-import argparse
+import sys, os
 
 # Astropy imports
 import astropy.units as u, astropy.constants as c
@@ -30,7 +30,9 @@ from astropy.coordinates import SkyCoord
 
 def make_catalog(name):
     '''
-    Prepares catalogs on hard drives (run one time).
+    Prepares catalogs on hard drives (run one time). Messier coordinates are
+    retrieved from Simbad via astroquery.  NGC catalog (2000) was downloaded
+    from HEASARC.
 
     args:
         name (str): one in: ['messier', 'ngc_best']
@@ -212,21 +214,25 @@ def get_bright_objects_that_are_up(time):
     return out_df
 
 
+def write_to_csv(df, time_str):
+
+    savdir = '../LOGS/'+''.join(time_str[2:10].split('-'))
+    if not os.path.exists(savdir):
+        os.makedirs(savdir)
+    savpath = savdir + '/whats_up_' + time_str[-8:-3] + '.csv'
+    df.to_csv(savpath, index=False)
+    print('wrote output to {:s}'.format(savpath))
+
+
 if __name__ == '__main__':
 
-Make a csv file of [messier_id,ngc_id,v_mag,type,comments] V<11 objects that
-are bright and up.
+    time_str = sys.argv[1]
 
-    parser = argparse.ArgumentParser(description=
-            'Make a csv file of bright objects that are up at a given time')
-    parser.add_argument('-irtest', '--injrecovtest', action='store_true',
-        help='Inject and recover periodic transits for a small number of '+\
-             'trial stars. Must specify N.')
+    if len(sys.argv[1:]) > 1:
+        # Data wrangling only needs to be run once.
+        assert sys.argv[2] == '--make_catalog'
+        make_catalog('messier')
+        make_catalog('ngc')
 
-
-
-    # RUN ONCE:
-    #make_catalog('messier')
-    #make_catalog('ngc')
-
-    df = get_bright_objects_that_are_up('2017-04-17 22:00:00')
+    df = get_bright_objects_that_are_up(time_str)
+    write_to_csv(df, time_str)
