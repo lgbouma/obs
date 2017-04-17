@@ -1,6 +1,9 @@
 LOGS/
-data/
 doc/
 170411*
 image_processing*
 *pdf
+data/demo_*
+data/finder_charts*
+data/pics*
+data/video*

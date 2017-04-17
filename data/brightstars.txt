@@ -1,0 +1,251 @@
+#STAR RA     DEC SIZE MAG TYPE & DESCRIPTION ALT NAME Q TAGS COMMON NAME/COMMENTS
+*  1 0008.3 +2906 2.1v STAR  B8.5p IV:(Hg+Mn) Alpha And   8 ST Alpheratz     
+*  2 0009.2 +5910 2.3v STAR  F2 III-IV        Beta Cas    8 ST Caph                  
+*  3 0013.2 +1512 2.8v STAR  B2 IV            Gamma Peg   8 ST Algenib                  
+*  4 0025.7 -7715 2.8v STAR  G1 IV            Beta Hyi    8 ST                           
+*  5 0026.3 -4218 2.4v STAR  K0 IIIb          Alpha Phe   8 ST Ankaa                  
+*  6 0039.4 +3052 3.3v STAR  K3 III           Delta And A 8 ST                       
+*  7 0040.5 +5633 2.2v STAR  K0 IIIa          Alpha Cas   8 ST Shedir                 
+*  8 0043.6 -1759 2.0v STAR  G9.5 III         Beta Cet    8 ST Diphda                 
+*  9 0056.7 +6043 2.5v STAR  B0 IVnpe(shell)+ ? Gamma Cas 9 ST Marj  B=20 8.8 
+* 10 0106.1 -4643 3.3v STAR  G8 III           Beta Phe AB  9 ST B=Similar mag & sp10 ectrum
+* 11 0109.8 +3537 2.1v STAR  M0 IIIa          Beta And 8 ST Mirach                  
+* 12 0125.8 +6015 2.7v STAR  A5 IV            Delta Cas 8 ST Ruchbah  Ecl-Bin @759d     
+* 13 0137.7 -5714 0.5v STAR  B3 Vnp (shell)   Alpha Eri 8 ST Achernar        
+* 14 0154.7 +2049 2.6v STAR  A5 V             Beta Ari 8 ST Sharatan                   
+* 15 0158.7 -6134 2.9v STAR  A9 III-IVn       Alpha Hyi 8 ST                     
+* 16 0204.0 +4221  2.3v STAR K3 IIb + B9 V + A0 V Gamma And A 9 ST Alma100ak  B=5.4  C=6.2
+* 17 0207.2 +2328 2.0v STAR  K2 IIIab         Alpha Ari 8 ST Hamal                 
+* 18 0209.5 +3459 3.0v STAR  A5 IV            Beta Tri 8 ST                           
+* 19 0214.7 +8917  2.0v STAR  F5-8 Ib + F3 V  Alpha UMi A 9 ST Polaris  B180=8.2 
+* 20 0219.4 -0258 2.1v STAR  M5.5-9 IIIe + Bpe Omicron Cet A 9 ST Mira  10 B=9.5 
+* 21 0258.3 -4019  3.2v STAR  A5 IV           Theta Eri A 8 ST Acamar                
+* 22 0302.3 +0405  2.5v STAR  M1.5 IIIa       Alpha Cet 8 ST Menkar              
+* 23 0304.8 +5331  2.9v STAR  G8 III + A2 V   Gamma Per 8 ST                 
+* 24 0308.2 +4058  2.1v STAR  B8 V + F:       Beta Per 8 ST Algol                
+* 25 0324.4 +4952  1.8v STAR  F5 Ib           Alpha Per 8 ST Mirphak                 
+* 26 0343.0 +4748  3.0v STAR  B5 IIIn         Delta Per 8 ST                       
+* 27 0347.6 +2706  2.9v STAR  B7 IIIn         Eta Tau  8 ST Alcyone                
+* 28 0347.2 -7415  3.2v STAR  M2 III          Gamma Hyi 8 ST                        
+* 29 0354.2 +3154  2.9v STAR  B1 Ib + B8 V    Zeta Per A 9 ST B=9.2        130
+* 30 0357.8 +4001  2.9v STAR  B0.5 IV + B9.5 V Epsilon Per A 9 ST B=7.9 90 
+* 31 0358.0 -1330  3.0v STAR  M0.5 III-IIIb    Gamma Eri 8 ST Zaurak          
+* 32 0434.0 -5502  3.3v STAR  A0p III:(Si) + B9 IV Alpha Dor AB 9 ST A=32  .8  B=4.3
+* 33 0435.9 +1631  0.9v STAR  K5 III Alpha Tau A 8 ST Aldebaran            
+* 34 0449.9 +0657  3.2v STAR  F6 V Pi^3 Ori 8 ST Hassaleh                  
+* 35 0457.0 +3311  2.7v STAR  K3 II Iota Aur 8 ST Ayn                      
+* 36 0502.0 +4349  3.0v STAR  A9 Iae + B Epsilon Aur A 8 ST Anz            
+* 37 0505.5 -2222  3.2v STAR  K5 III Epsilon Lep  8 ST                     
+* 38 0506.6 +4114  3.2v STAR  B3 V Eta Ori AB   8 ST Hoedus II             
+* 39 0507.9 -0505  2.8v STAR  A3 IIIn Theta Eri 8 ST Kursa                 
+* 40 0512.9 -1612  3.1v STAR  B9p IV: (Hg+Mn) Mu Lep   8 ST                
+* 41 0514.6 -0812 0.1v STAR  B8 Iae + B5 V Beta Ori A 9 ST Rigel  B=7.6 90  C=7.6 
+* 42 0516.6 +4600  0.1v STAR  G6: III + G2: III Alpha Aur AB 8 ST Capell   a 
+* 43 0524.5 -0224  3.3v STAR  B1 IV + B Eta Ori AB   8 ST                  
+* 44 0525.2 +0621  1.6v STAR  B2 III Gamma Ori 8 ST Bellatrix              
+* 45 0526.3 +2837  1.7v STAR  B7 III Beta Tau 8 ST Alnath                  
+* 46 0528.3 -2046 2.8v STAR  G5 II + ? Beta Lep A 9 ST B=7.4            26 
+* 47 0532.0 -0019 2.2v STAR  O9.5 II Delta Ori A 8 ST Mintaka              
+* 48 0532.7 -1749 2.6v STAR  F0 Ib Alpha Lep 8 ST Arneb                    
+* 49 0546.5 -0555  2.8v STAR  O9 III + B7 IIIp Iota Ori A 9 ST Nair al S110aif  B=7.3 
+* 50 0536.2 -0112  1.7v STAR  B0 Ia Epsilon Ori  8 ST Alnilam              
+* 51 0537.6 +2109  3.0v STAR  B2 IIIpe (shell) Zeta Tau 8 ST               
+* 52 0539.7 -3404  2.6v STAR  B7 IV Alpha Col A 8 ST Phaet                 
+* 53 0540.8 -0156 2.1v STAR  O9.5 Ib + B0 III Zeta Ori A 9 ST Alnitak  B24 =4.2
+* 54 0547.8 -0940 2.1v STAR  B0.5 Ia Kappa Ori 8 ST Saiph                  
+* 55 0551.0 -3546 3.1v STAR  K1.5 III Beta Col 8 ST Wezn                   
+* 56 0555.2 +0725 0.4v STAR  M2 Iab Alpha Ori 8 ST Betelgeuse              
+* 57 0559.5 +4457 1.9v STAR  A1 IV Beta Aur 8 ST Menkalinan                
+* 58 0559.8 +3713 2.6v STAR  A0p III: (si) + G2 V Theta Aur AB 9 ST Boga40 rdus  B=7.2 G2V
+* 59 0614.9 +2231 3.3v STAR  M3 III Eta Gem  8 ST Propus                   
+* 60 0620.3 -3003 3.0v STAR  B2.5 V Zeta CMa 8 ST Phurud                   
+* 61 0622.9 +2231 2.8v STAR  M3 IIIab Mu Gem   8 ST Tejat Posterior        
+* 62 0622.7 -1758 2.0v STAR  B1 II-III Beta CMa 8 ST Murzim                
+* 63 0624.0 -5242 -0.7v STAR  A9 II Alpha Car 8 ST Canopus                 
+* 64 0637.7 +1624 1.9v STAR  A1 IVs Gamma Gem 8 ST Alhena                  
+* 65 0637.7 -4312 3.2v STAR  B8 IIIn Nu Pup   8 ST                         
+* 66 0644.0 +2508 3.0v STAR  G8 Ib Epsilon Gem  8 ST Mebsuta               
+* 67 0645.2 -1643 -1.5v STAR  A0mA1 Va Alpha CMa A 9 ST Sirius  B=8.5 5095 y
+* 68 0648.2 -6156 3.3v STAR  A6 Vn Alpha Pic 8 ST                          
+* 69 0649.9 -5037 2.9v STAR  K1 III Tau Pup  8 ST                          
+* 70 0658.6 -2858 1.5v STAR  B2 II Epsilon CMa A 8 ST Adara                
+* 71 0703.1 -2350 3.0v STAR  B3 Iab Omicron^2 CMa 8 ST                     
+* 72 0708.4 -2623 1.8v STAR  F8 Ia Delta CMa 8 ST Wezen                    
+* 73 0713.5 -4438 2.6v STAR  M5 IIIe L2 Pup   8 ST HR2748                  
+* 74 0717.2 -3705 2.7v STAR  K3 Ib Pi Pup   8 ST                           
+* 75 0724.2 -2619 2.5v STAR  B5 Ia Eta CMa  8 ST Aludra                    
+* 76 0727.2 +0817 2.9v STAR  B8 V Beta CMi 8 ST Gomeisa                    
+* 77 0729.3 -4317  3.3v STAR  K5 III + G5: V Sigma Pup A 9 ST           220
+* 78 0734.6 +3153 1.9v STAR  A1 V + A2mA5 Alpha Gem A 9 ST Castor A     25 
+* 79 0734.6 +3153 2.9v STAR  A2mA5 + A1 V Alpha Gem B  9 ST Castor B    25 
+* 80 0739.3 +0514 0.4v STAR  F5 IV-V + ? Alpha CMi A 9 ST Procyon  B=10.40 3 
+* 81 0745.4 +2802 1.1v STAR  K0 IIIb Beta Gem 8 ST Pollux                  
+* 82 0749.3 -2452 3.3v STAR  G6 Ib Xi Pup   8 ST                           
+* 83 0803.7 -3001 2.3v STAR  O5 Iafn Zeta Pup 8 ST Naos                    
+* 84 0807.6 -2419 2.7v STAR  F6 IIp (var) Rho Pup  8 ST                    
+* 85 0809.5 -4721 1.7v STAR  WC8 + O9 I: Gamma^2 Vel  8 ST                 
+* 86 0822.5 -5931 1.9v STAR  K3: III Epsilon Car  8 ST Avior               
+* 87 0844.7 -5443 2.0v STAR  A1 IV Delta Vel AB 9 ST B=5.0              20 
+* 88 0855.5 +0556 3.1v STAR  G9 II-III Zeta Hya 8 ST                       
+* 89 0859.3 +4803 3.1v STAR  A7 IVn + M1 V Iota UMa A 9 ST Talitha  BC=140 0.8
+* 90 0908.0 -4325 2.2v STAR  K4 Ib-IIa Lambda Vel   8 ST Suhail            
+* 91 0913.3 -6944 1.7v STAR  A1 III Beta Car 8 ST Miaplacidus              
+* 92 0917.1 -5917 2.2v STAR  A8 II Iota Car 8 ST Turais                    
+* 93 0921.1 +3423 3.1v STAR  K7 IIIab Alpha Lyn 8 ST                       
+* 94 0922.1 -5501 2.5v STAR  B2 IV-V Kappa Vel 8 ST                        
+* 95 0927.6 -0839 2.0v STAR  K3 II-III Alpha Hya 8 ST Alphard              
+* 96 0931.2 -5701 3.1v STAR  K5 III N Vel 8 ST HR3803                      
+* 97 0933.0 +5141 3.2v STAR  F6 IV Theta UMa 8 ST                          
+* 98 0945.9 +2346 3.0v STAR  G1 II 1 Leo 8 ST Ras Elased Aus               
+* 99 0947.2 -6505 3.0v STAR  A5 Ib + B7 III Nu Car AB 9 ST B=6.3        50 
+*100 1008.5 +1158 1.4v STAR  B7 Vn Alpha Leo A 8 ST Regulus                
+*101 1013.7 -7002 3.3v STAR  B8 IIIn Omega Car 8 ST                        
+*102 1020.0 +1951 2.6v STAR  K1 IIIb Fe-0.5 + * Gamma Leo A 9 ST Algieba50   B=3.5 G7 III Fe-1  
+*103 1022.4 +4130 3.1v STAR  M0 IIIp Mu Uma   8 ST Tania Australis         
+*104 1032.0 -6142 3.3v STAR  B4 Vne Rho Car  8 ST HR4140                   
+*105 1043.0 -6424 2.8v STAR  B0.5 Vp Theta Car 8 ST                        
+*106 1046.8 -4926 2.7v STAR  G5 III + F8: V Mu Vel AB 9 ST B=6.4        20 
+*107 1049.7 -1611 3.1v STAR  K2 III Ny Hya   8 ST                          
+*108 1101.9 +5623 2.4v STAR  A0mA1 IV-V Beta UMa 8 ST Merak                
+*109 1103.8 +6145 3 1.8v STAR  K0 IIIa + A8 V Alpha UMa AB 9 ST Dubhe  B   =4.8
+*110 1109.7 +4430 3.0v STAR  K1 III Psi UMa  8 ST                          
+*111 1114.2 +2032 2.6v STAR  A4 V Delta Leo 8 ST Zosma                     
+*112 1114.2 +1526 3.3v STAR  A2 Vs Theta Leo 8 ST Chort                    
+*113 1135.8 -6302 3.1v STAR  B9 III Lambda Cen   8 ST                      
+*114 1149.1 +1434 2.1v STAR  A3 V Beta Leo 8 ST Denebola                   
+*115 1153.8 +5341 2.4v STAR  A0 IV-Vn Gamma UMa 8 ST Phad                  
+*116 1208.4 -5044 2.5v STAR  B2 IVne Delta Cen 8 ST                        
+*117 1210.1 -2237 3.0v STAR  K3 IIIa Epsilon Crv  8 ST Minkar              
+*118 1215.1 -5845 2.8v STAR  B2 IV Delta Cru 8 ST                          
+*119 1215.5 +5701 3.3v STAR  A2 IV-Vn Delta UMa 8 ST Megrez                
+*120 1215.8 -1733 2.6v STAR  B8p III: (Hg+Mn) Gamma Crv 8 ST Gienah Ghur   ab
+*121 1226.6 -6306 1.3v STAR  B0.5 IV + B1 Vn Alpha Cru A 9 ST Acrux A B=50 1.7
+*122 1226.7 -6307 1.7v STAR  B1 Vn + B0.5 IV Alpha Cru B  9 ST Acrux B  50 A=1.3
+*123 1229.9 -1631  3.0v STAR  B9.5 III + K2 V Delta Crv A 9 ST Algorab  240B=8.3
+*124 1231.2 -5707 1.6v STAR  M3.5 III Gamma Cru 8 ST Gacrux                
+*125 1234.4 -2324 2.7v STAR  G5 II Beta Crv 8 ST Kraz                      
+*126 1237.2 -6909 2.7v STAR  B2 IV-V Alpha Mus 8 ST                        
+*127 1241.6 -4858 2.9v STAR  B9.5 III + A0 III Gamma Cen A 9 ST B=3.0   50 
+*128 1241.5 -4858 3.0v STAR  A0 III + B9.5 III Gamma Cen B  9 ST A=2.9  50 
+*129 1241.7 -0128 2.8v STAR  F1 V + F1 V Gamma Vir AB 9 ST Porrima  B=3.40 5
+*130 1246.2 -6807 3.1v STAR  B2 V + B2.5 V Beta Mus AB  9 ST B=4.1      10 
+*131 1247.7 -5942 1.2v STAR  B0.5 III Beta Cru 8 ST Becrux  Mimosa         
+*132 1254.0 +5558 1.8v STAR  A0p IV: (Cr+Eu) Epsilon UMa  8 ST Alioth      
+*133 1256.1 +3819 2.9v STAR  A0p III: (Si+Eu+Sr) Alpha^2 CVn A 8 ST Cor    Caroli  B=5.6 F0 V  
+*134 1302.2 +1058 2.8v STAR  G9 IIIab Epsilon Vir  8 ST Vindamiatrix       
+*135 1319.0 -2311 3.0v STAR  G8 IIIa Gamma Hya 8 ST                        
+*136 1320.6 -3643 2.8v STAR  A2 V Iota Cen 8 ST                            
+*137 1324.0 +5455  2.3v STAR  A1p IV: (Si) + A1mA7 Zeta UMa A 9 ST Mizar140  B=3.9
+*138 1325.2 -1110 1.0v STAR  B1 V Alpha Vir 8 ST Spica                     
+*139 1339.9 -5328 2.3v STAR  B1 III Epsilon Cen  8 ST                      
+*140 1347.6 +4919 1.9v STAR  B3 V Eta UMa  8 ST Alcaid                     
+*141 1349.6 -4228 3.0v STAR  B2 IV-Vpne Mu Cen   8 ST                      
+*142 1354.7 +1824 2.7v STAR  G0 IV Eta Boo  8 ST Mufrid                    
+*143 1355.6 -4717 2.6v STAR  B2.5 IV Zeta Cen 8 ST                         
+*144 1403.9 -6024 0.6v STAR  B1 III Beta Cen AB  8 ST Hadar                
+*145 1406.4 -2641 3.3v STAR  K2 IIIb Pi Hya   8 ST                         
+*146 1406.7 -3622 2.1v STAR  K0 IIIb Theta Cen 8 ST Menkent                
+*147 1415.7 +1911 0.0v STAR  K1.5 III Fe-0.5 Alpha Boo 8 ST Arcturus       
+*148 1432.1 +3819 3.0v STAR  A7 III-IV Gamma Boo 8 ST Seginus              
+*149 1435.5 -4210  STAR  B1.5 IVpne Eta Cen  8 ST                       2.4
+*150 1439.8 -6051  0.0v STAR  G2 V + K4 V Alpha Cen A 9 ST Rigel Kentaur210us  B=1.3
+*151 1439.8 -6051  1.3v STAR  K4 V + G2 V Alpha Cen B  9 ST A=0.0       210
+*152 1441.9 -4724  2.3v STAR  B1.5 III Alpha Lup 8 ST                      
+*153 1442.5 -6459  3.2v STAR  A7p (Sr) + K5 V Alpha Cir 9 ST B=8.6      160
+*154 1446.6 +2704 2.4v STAR  K0 II-III + A0 V Epsilon Boo  9 ST Izar  B=30 5.1 
+*155 1451.1 -5103 2.8v STAR  A3 IV Alpha Lib A 8 ST Zuben Elgenubi         
+*156 1450.6 +7410 2.1v STAR  K4 III Beta UMi 8 ST Kocab                    
+*157 1458.5 -4308 2.7v STAR  B2 IV Beta Lup 8 ST                           
+*158 1459.2 -4206 3.1v STAR  B2 V Kappa Cen 8 ST                           
+*159 1504.1 -2518 3.3v STAR  M4 III Sigma Lib 8 ST Brachium                
+*160 1517.1 -0923 2.6v STAR  B8 Vn Beta Lib 8 ST Zuben Elschemali          
+*161 1518.9 -6841 2.9v STAR  A1 IIIn Gamma TrA 8 ST                        
+*162 1521.4 -4039 3.2v STAR  B1.5 IVn Delta Lup 8 ST                       
+*163 1520.7 +7150 3.1v STAR  A2.5 III Gamma UMi 8 ST Pherkad               
+*164 1524.9 +5858 3.3v STAR  K2 III Iota Dra 8 ST Ed Asich                 
+*165 1535.5 +2643 2.2v STAR  A0 IV Gamma CrB 8 ST Alphekka                 
+*166 1535.1 -4110 2.8v STAR  B2 IVn + B2 IVn Alpha Lup AB 9 ST A=3.5  B=5  3.6
+*167 1554.3 +0625 2.7v STAR  K2 IIIb (CN1) Alpha Ser 8 ST Unukalhai        
+*168 1555.1 -6326 2.9v STAR  F0 IV Beta Tra 8 ST                           
+*169 1558.9 -2608 2.9v STAR  B1 V + B2 V Pi Sco A 8 ST                     
+*170 1559.5 +2554 2.0v STAR  gM3: + Bep T CrB 8 ST Galt                    
+*171 1600.3 -2238 2.3v STAR  B0.3 IV Delta Sco AB 8 ST Dschubba            
+*172 1605.5 -1948 2.6v STAR  B0.5 IV Beta Sco AB  9 ST Graffias  B=5.0  10 C=4.9 @ 14"
+*173 1614.3 -0343 2.7v STAR  M0.5 III Delta Oph 8 ST Yed Prior             
+*174 1618.3 -0436 3.2v STAR  G9.5 IIIb Fe-0.5 Epsilon Oph  8 ST Yed Post   erior 
+*175 1621.2 -2536  2.9v STAR  B1 III + B9 V Sigma Sco A 9 ST Alniyat  B=2008.3  
+*176 1624.0 +6131 2.7v STAR  G8 IIIab Eta Dra A 9 ST B=8.7              60 
+*177 1629.5 -2626 0.9v STAR  M1.5 Iab + B2.5 V Alpha Sco A 9 ST Antares 30  B=5.4
+*178 1630.2 +2129 2.8v STAR  G7 IIIa Beta Her 8 ST Kornephoros             
+*179 1635.9 -2813 2.8v STAR  B0 V Tau Sco  8 ST                            
+*180 1637.2 -1034 2.6v STAR  O9.5 Vn Zeta Oph 8 ST Fieht                   
+*181 1641.3 +3136 2.8v STAR  G1 IV + G7 V Zeta Her AB  9 ST B=5.5       11 
+*182 1648.7 -6902 1.9v STAR  K2 IIb - IIIa Alpha TrA 8 ST Artia            
+*183 1650.2 -3417 2.3v STAR  K2 III Epsilon Sco  8 ST                      
+*184 1651.9 -3803 3.0v STAR  B1.5 IVn Mu^1 Sco 8 ST                        
+*185 1657.7 +0922 3.2v STAR  K2 III Kappa Oph 8 ST                         
+*186 1658.7 -5600 3.1v STAR  K4 III Zeta Ara 8 ST                          
+*187 1708.7 +6543 3.2v STAR  B6 III Zeta Dra 8 ST Aldhibah                 
+*188 1710.4 -1544 2.4v STAR  A2 Vs + A3 V Eta Oph AB   9 ST Sabik  A=3.010   B=3.5 
+*189 1712.2 -4314 3.3v STAR  F2p V: (Cr) Eta Sco  8 ST                     
+*190 1714.7 +1423 3.1v STAR  M5 Ib-II Alpha Her AB 8 ST Ras Algethi        
+*191 1715.1 +2450 3.1v STAR  A1 IVn + ? Delta Her 9 ST Sarin  B=8.8     90 
+*192 1715.1 +3648 3.2v STAR  K3 IIab Pi Her   8 ST                         
+*193 1722.1 -2500 3.3v STAR  B2 IV Alpha Oph 8 ST                          
+*194 1725.4 -5532 2.9v STAR  K3 Ib-IIa Beta Ara 8 ST                       
+*195 1725.5 -5623 3.3v STAR  B1 Ib Gamma Ara A 8 ST                        
+*196 1730.8 -3717 2.7v STAR  B2 IV Upsilon Sco  8 ST                       
+*197 1730.4 +5219 2.8v STAR  G2 Ib-IIa + ? Beta Dra A 9 ST Restaban  B=140 1.5
+*198 1731.9 -4952 3.0v STAR  B2 Vne Alpha Ara 8 ST                         
+*199 1733.7 -3707 1.6v STAR  B1.5 IV Lambda Sco   8 ST Shaula              
+*200 1725.0 +1233 2.1v STAR  A5 IIIn Alpha Oph 8 ST Rasalhague             
+*201 1737.3 -4300 1.9v STAR  F1 II Theta Sco 8 ST Sargas                   
+*202 1742.6 -3902 2.4v STAR  B1.5 III Kappa Sco 8 ST                       
+*203 1743.5 +0434 2.8v STAR  K2 III Beta Oph 8 ST Cebalrai                 
+*204 1747.6 -4007  STAR  F2 Ia Iota^1 Sco   8 ST                        3.0
+*205 1749.9 -3702 3.2v STAR  K2 III G Sco 8 ST HR6630                      
+*206 1756.6 +5129 2.2v STAR  K5 III Gamma Dra 8 ST Etamin                  
+*207 1759.1 -0946 3.3v STAR  K0 III Nu Oph   8 ST                          
+*208 1805.8 -3026 3.0v STAR  K0 III Gamma^2 Sgr  8 ST Nash                 
+*209 1817.7 -3646 3.1v STAR  M3.5 IIIab + G8: IV: Eta Sgr A 9 ST B=8.3  40 
+*210 1821.0 -2950 2.7v STAR  K2.5 IIIa Delta Sgr 8 ST                      
+*211 1821.3 -0254 3.3v STAR  K0 III-IV Eta Ser  8 ST                       
+*212 1824.2 -3423 1.9v STAR  A0 IIInp (shell) Epsilon Sgr  8 ST Kaus Aus   tralis
+*213 1828.0 -2525 2.8v STAR  K1 IIIb Lambda Sgr   8 ST Kaus Borealis       
+*214 1837.0 +3847 0.0v STAR  A0 Va Alpha Lyr 8 ST Vega                     
+*215 1845.7 -2659 3.2v STAR  B8.5 III Phi Sgr  8 ST                        
+*216 1855.3 -2618 2.0v STAR  B2.5 V Sigma Sgr 8 ST Nunki                   
+*217 1858.9 +3241 3.2v STAR  B9 III Gamma Lyr 8 ST Sulaphat                
+*218 1902.7 -2953 .6v STAR  A2.5 V + A4: V: Zeta Sgr AB  9 ST Ascella  A5 2=3.2  B=3.5
+*219 1905.5 +1353 3.0v STAR  A0 IVnn Zeta Aql A 8 ST                       
+*220 1907.0 -2739 3.3v STAR  K1.5 IIIb Tau Sgr  8 ST                       
+*221 1909.8 -2102 2.9v STAR  F2 II + ? + ? Pi Sgr ABC   9 ST Albaldah  A6  =3.7  B=3.8
+*222 1912.6 +6739 3.1v STAR  G9 III Delta Dra 8 ST Nodus Secundus          
+*223 1930.8 +2758  3.1v STAR  K3 II + B9.5 V Beta Cyg A 9 ST Albireo  B=3505.1
+*224 1945.0 +4508 2.9v STAR  B9.5 III + F1 V Delta Cyg AB 9 ST B=6.4    20 
+*225 1946.3 +1037 2.7v STAR  K3 II Gamma Aql 8 ST Tarazed                  
+*226 1950.8 +0852 0.8v STAR  A7 Vn Alpha Aql 8 ST Altair                   
+*227 2011.3 -0050 3.2v STAR  B9.5 III Theta Aql 8 ST                       
+*228 2021.1 -1446 3.1v STAR  K0 II + A5 V:n Beta Cap A 8 ST Dabih          
+*229 2022.2 +4016 2.2v STAR  F8 Ib Gamma Cyg 8 ST Sadr                     
+*230 2026.9 +1505 1.9v STAR  B2.5 V Alpha Pav 8 ST Peacock                 
+*231 2037.6 -4718 3.1v STAR  K0 III (Cn1) Alpha Ind 8 ST                   
+*232 2041.5 +4517 1.3v STAR  A2 Ia Alpha Cyg 8 ST Deneb                    
+*233 2046.3 +3358 2.5v STAR  K0 III Epsilon Cyg  8 ST Cat                  
+*234 2113.0 +3013 3.2v STAR  G8 IIIa Ba 0.6 Zeta Cyg 8 ST                  
+*235 2118.6 +6236 2.4v STAR  A7 IV-V Alpha Cep 8 ST Alderamin              
+*236 2128.7 +7033 3.2v STAR  B1 III Beta Cep 8 ST Alphirk                  
+*237 2131.6 -0535 2.9v STAR  G0 Ib Beta Aqr 8 ST Sadalsuud                 
+*238 2144.2 +0953 2.4v STAR  K2 Ib Epsilon Peg  8 ST Enif  '72 flare       
+*239 2147.1 -1607 2.9v STAR  A3mF2 V: Delta Cap 8 ST                       
+*240 2154.0 -3722 3.0v STAR  B8 III Gamma Gru 8 ST                         
+*241 2205.8 -0019 3.0v STAR  G2 Ib Alpha Aqr 8 ST Sadalmelik               
+*242 2208.3 -4658 1.7v STAR  B7 IV Alpha Gru 8 ST Al Nair                  
+*243 2218.6 -6016 2.9v STAR  K3 III Alpha Tuc 8 ST                         
+*244 2242.7 -4652 2.1v STAR  M5 III Beta Gru 8 ST                          
+*245 2243.1 +3014 2.9v STAR  G8 II + F0 V Eta Peg  8 ST Matar              
+*246 2253.6 -1550 3.3v STAR  A3 IV Delta Aqr 8 ST Skat                     
+*247 2257.7 -2938 1.2v STAR  A3 V Alpha PsA 8 ST Fomalhaut                 
+*248 2303.8 +2805 2.4v STAR  M2 II-III Beta Peg 8 ST Scheat                
+*249 2304.8 +1512 2.5v STAR  B9.5 V Alpha Peg 8 ST Markab                  
+*250 2339.4 +7738 3.2v STAR  K1 III-IV Gamma Cep 8 ST Alrai                
