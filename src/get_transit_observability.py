@@ -8,13 +8,14 @@ import os
 from glob import glob
 
 from astropy.time import Time
-from astropy.coordinates import SkyCoord
+from astropy.coordinates import get_body, get_sun, get_moon, SkyCoord
 import astropy.units as u
 
 from astroplan import (FixedTarget, Observer, EclipsingSystem,
                        PrimaryEclipseConstraint, is_event_observable,
                        AtNightConstraint, AltitudeConstraint,
-                       LocalTimeConstraint)
+                       LocalTimeConstraint, MoonSeparationConstraint,
+                       moon)
 
 import datetime as dt
 
@@ -71,7 +72,8 @@ def get_transit_observability(
     min_local_time=dt.time(16, 0),
     max_local_time=dt.time(9, 0),
     min_altitude=20*u.deg,
-    oot_duration = 30*u.minute
+    oot_duration = 30*u.minute,
+    minokmoonsep = 30*u.deg
 ):
     """
     note: barycentric corrections not yet implemented. (could do this myself!)
@@ -135,7 +137,8 @@ def get_transit_observability(
 
     # for the time being, omit any local time constraints.
     constraints = [AtNightConstraint.twilight_civil(),
-                   AltitudeConstraint(min=min_altitude)]
+                   AltitudeConstraint(min=min_altitude),
+                   MoonSeparationConstraint(min=minokmoonsep)]
     #constraints = [AtNightConstraint.twilight_civil(),
     #               AltitudeConstraint(min=min_altitude),
     #               LocalTimeConstraint(min=min_local_time, max=max_local_time)]
@@ -149,6 +152,24 @@ def get_transit_observability(
 
     ibe = is_event_observable(constraints, site, target,
                               times_ingress_egress=ing_egr)
+
+    # get moon separation over each transit. take minimum moon sep at
+    # ing/tmid/egr as the moon separation.
+    moon_tmid = get_moon(midtransit_times, location=site.location)
+    moon_separation_tmid = moon_tmid.separation(target_coord)
+
+    moon_ing = get_moon(ing_egr[:,0], location=site.location)
+    moon_separation_ing = moon_ing.separation(target_coord)
+
+    moon_egr = get_moon(ing_egr[:,1], location=site.location)
+    moon_separation_egr = moon_egr.separation(target_coord)
+
+    moon_separation = np.round(np.array(
+        [moon_separation_tmid, moon_separation_ing,
+         moon_separation_egr]).min(axis=0),0).astype(int)
+
+    moon_illumination = np.round(
+        100*moon.moon_illumination(midtransit_times),0).astype(int)
 
     # completely observable transits (OOT, ingress, bottom, egress, OOT)
     oot_ing_egr = np.concatenate(
@@ -165,12 +186,14 @@ def get_transit_observability(
          np.array(ing_egr[:,1] + oot_duration)[:,None]),
         axis=1)
 
-    return ibe, oibeo, ing_tmid_egr
+    return ibe, oibeo, ing_tmid_egr, moon_separation, moon_illumination
 
 
 def print_transit_observability(ibe, oibeo, ing_tmid_egr, site, ra, dec, name,
                                 t_mid_0, period, duration, min_altitude,
-                                oot_duration, outdir="../results/"):
+                                oot_duration, moon_separation,
+                                moon_illumination, minokmoonsep=30*u.deg,
+                                outdir="../results/"):
     """
     write output to ../results/{name}_{site}.txt
     """
@@ -195,24 +218,24 @@ Given:
 Constrain to observe with:
         altitude > {}
         and
-        night-time (nautical twilight).
+        night-time (nautical twilight)
+        and
+        moon separation > {}
 
 Defined "out of transit" to be {} on either side of ingress/egress.
 
 ==========================================
 OBSERVABLE IN OIBEO (ALL TIMES IN UTC)
 
-epoch     t_ing                 t_mid                 t_egr
--------------------------------------------------------------------------------
+epoch     t_ing                 t_mid                 t_egr                 sep  illum
+--------------------------------------------------------------------------------------
 """.format(
     name, site.name,
     site.location.lon, site.location.lat, site.location.height,
     ra, dec,
     t_mid_0, period, duration,
-    min_altitude,
-    oot_duration
-)
-    )
+    min_altitude, minokmoonsep,
+    oot_duration ))
 
     n_oibeo = len(oibeo[oibeo])
 
@@ -242,17 +265,21 @@ epoch     t_ing                 t_mid                 t_egr
                 ((t_mid_val - t_mid_0)/period.value) % 1, 1, atol=1e-3
             ) or
             np.isclose(
-                ((t_mid_val - t_mid_0)/period.value) % 0, 1, atol=1e-3
+                ((t_mid_val - t_mid_0)/period.value) % 1, 0, atol=1e-3
             )
         ):
             raise AssertionError('got error in tra_ind {}')
 
         epoch_str = '{}'.format(epoch).ljust(10,' ')
 
-        this_line = '{}{}{}{}\n'.format(epoch_str,
-                                      t_ing_str,
-                                      t_mid_str,
-                                      t_egr_str)
+        moon_sep_str = '{}d'.format(
+            moon_separation[oibeo.flatten()][tra_ind]).ljust(5,' ')
+        moon_ill_str = '{}%'.format(
+            moon_illumination[oibeo.flatten()][tra_ind]).ljust(5,' ')
+
+        this_line = '{}{}{}{}{}{}\n'.format(
+            epoch_str, t_ing_str, t_mid_str, t_egr_str, moon_sep_str,
+            moon_ill_str)
 
         lines.append(this_line)
 
@@ -268,22 +295,24 @@ epoch     t_ing                 t_mid                 t_egr
 if __name__ == "__main__":
 
 
-    # will change these a lot (todo: when in bulk -- write argparse interface)
+    # will change these a lot (TODO: when in bulk -- write argparse interface)
     ##########################################
     #HIRES
     #site = Observer.at_site('W. M. Keck Observatory')
     #NEID
     #site = Observer.at_site('Kitt Peak National Observatory')
     #HARPS-N
-    site = Observer.at_site('lapalma')
+    #site = Observer.at_site('lapalma')
+    #Las Campanas
+    site = Observer.at_site('Las Campanas Observatory')
 
-    ra="04 05 19.6"
-    dec="+20 09 25.6"
-    name = 'V1298_Tau_b'
+    ra="23 39 39.48044"
+    dec="-69 11 44.7051"
+    name = 'DS_Tuc_A_b'
 
-    t_mid_0 = 2457091.18842 # BJD_TDB
-    period = 24.13889*u.day
-    duration = 6.386*u.hour
+    t_mid_0 = 2450000 + 8332.31013 # BJD_TDB
+    period = 8.1387*u.day
+    duration = 2.86667*u.hour
 
     # NOTE can omit
     # site = Observer.at_site('Las Campanas Observatory')
@@ -298,17 +327,20 @@ if __name__ == "__main__":
 
     # won't change these much
     ##########################################
-    n_transits = 500
+    n_transits = 100
     obs_start_time = Time(dt.datetime.today().isoformat())
-    min_altitude = 20*u.deg
-    oot_duration = 30*u.minute
-
+    min_altitude = 30*u.deg
+    oot_duration = 60*u.minute
+    minokmoonsep = 30*u.deg
     ##########################################
 
-    ibe, oibeo, ing_tmid_egr = get_transit_observability(
-       site, ra, dec, name, t_mid_0, period, duration, n_transits=n_transits,
-       obs_start_time=obs_start_time,
-       min_altitude=min_altitude, oot_duration=oot_duration
+    ibe, oibeo, ing_tmid_egr, moon_separation, moon_illumination = (
+        get_transit_observability(site, ra, dec, name, t_mid_0, period,
+                                  duration, n_transits=n_transits,
+                                  obs_start_time=obs_start_time,
+                                  min_altitude=min_altitude,
+                                  oot_duration=oot_duration,
+                                  minokmoonsep=minokmoonsep)
     )
 
     outdir = "../results/{}".format(name)
@@ -316,4 +348,6 @@ if __name__ == "__main__":
         os.mkdir(outdir)
     print_transit_observability(ibe, oibeo, ing_tmid_egr, site, ra, dec, name,
                                 t_mid_0, period, duration, min_altitude,
-                                oot_duration, outdir=outdir)
+                                oot_duration, moon_separation,
+                                moon_illumination, minokmoonsep=minokmoonsep,
+                                outdir=outdir)
