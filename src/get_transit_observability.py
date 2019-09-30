@@ -306,13 +306,26 @@ if __name__ == "__main__":
     #Las Campanas
     site = Observer.at_site('Las Campanas Observatory')
 
-    ra="23 39 39.48044"
-    dec="-69 11 44.7051"
-    name = 'DS_Tuc_A_b'
+    ra = "19:05:30.24"
+    dec = "-41:26:15.49"
+    name = "TOI_1130.02"
+    t_mid_0 = 2458658.73805 # BJD_TDB
+    period = 4.06719*u.day
+    duration = 1.783*u.hour
 
-    t_mid_0 = 2450000 + 8332.31013 # BJD_TDB
-    period = 8.1387*u.day
-    duration = 2.86667*u.hour
+    # ra = "19:05:30.24"
+    # dec = "-41:26:15.49"
+    # name = "TOI_1130.01"
+    # t_mid_0 = 2458657.89786 # BJD_TDB
+    # period = 8.3504*u.day
+    # duration = 1.814*u.hour
+
+    # ra="23 39 39.48044"
+    # dec="-69 11 44.7051"
+    # name = 'DS_Tuc_A_b'
+    # t_mid_0 = 2450000 + 8332.31013 # BJD_TDB
+    # period = 8.1387*u.day
+    # duration = 2.86667*u.hour
 
     # NOTE can omit
     # site = Observer.at_site('Las Campanas Observatory')
