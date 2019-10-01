@@ -181,9 +181,9 @@ def get_transit_observability(
                                 times_ingress_egress=oot_ing_egr)
 
     ing_tmid_egr = np.concatenate(
-        (np.array(ing_egr[:,0] - oot_duration)[:,None],
+        (np.array(ing_egr[:,0])[:,None],
          np.array(midtransit_times)[:,None],
-         np.array(ing_egr[:,1] + oot_duration)[:,None]),
+         np.array(ing_egr[:,1])[:,None]),
         axis=1)
 
     return ibe, oibeo, ing_tmid_egr, moon_separation, moon_illumination
