@@ -19,11 +19,11 @@ def main():
 
     site = Observer.at_site('Las Campanas Observatory')
 
-    ra = "19:05:30.24"
-    dec = "-41:26:15.49"
-    name = "TOI_1130.02"
-    start_time = Time('2019-10-11 22:51:00')
-    end_time = Time('2019-10-12 03:38:00')
+    ra = "07:21:28.72"
+    dec = "-45:34:03.85"
+    name = "TIC_59859387.01"
+    start_time = Time('2020-02-05 23:30:00')
+    end_time = Time('2020-02-06 09:30:00')
 
     ##########################################
 
